@@ -1,0 +1,41 @@
+import QObject, pyslot
+Ui_MainWindow should inherit from QObject
+
+# Change from  MainWindow to self
+        self.load_vessel_mask_btn.clicked.connect(self.loadVesselMaskSlot)
+        self.load_cell_positions_csv_btn.clicked.connect(self.loadVesselMaskSlot)
+        self.load_mask_video_btn.clicked.connect(self.loadMaskVidSlot)
+        self.next_frame_btn.clicked.connect(self.goToNextFrameSlot)
+        self.prev_frame_btn.clicked.connect(self.goToPrevFrameSlot)
+        self.actionNew.triggered.connect(self.newVideoSlot)
+        self.actionSave.triggered.connect(self.saveSlot)
+        self.actionSave_As.triggered.connect(self.saveAsSlot)
+
+# Add the following
+@QtCore.pyqtSlot()
+def loadVesselMaskSlot(self):
+    pass
+
+@QtCore.pyqtSlot()
+def loadCellPositionsCsvSlot(self):
+    pass
+
+@QtCore.pyqtSlot()
+def loadMaskVidSlot(self):
+    pass
+
+@QtCore.pyqtSlot()
+def goToNextFrameSlot(self):
+    pass
+
+@QtCore.pyqtSlot()
+def goToPrevFrameSlot(self):
+    pass
+
+@QtCore.pyqtSlot()
+def goToNextMarkedFrameSlot(self):
+    pass
+
+@QtCore.pyqtSlot()
+def goToPrevMarkedFrameSlot(self):
+    pass

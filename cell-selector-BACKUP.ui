@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>2136</width>
+    <height>692</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>200</y>
+      <width>1521</width>
+      <height>231</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QPushButton" name="prev_marked_frame_btn">
+         <property name="maximumSize">
+          <size>
+           <width>285</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>&lt;&lt; Prev Marked Frame</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="prev_frame_btn">
+         <property name="maximumSize">
+          <size>
+           <width>250</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>&lt; Prev Frame</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTextEdit" name="cur_frame_txt">
+         <property name="maximumSize">
+          <size>
+           <width>90</width>
+           <height>90</height>
+          </size>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="next_frame_btn">
+         <property name="maximumSize">
+          <size>
+           <width>250</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Next Frame &gt;</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="next_marked_frame_btn">
+         <property name="maximumSize">
+          <size>
+           <width>285</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Next Marked Frame &gt;&gt;</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <property name="spacing">
+        <number>62</number>
+       </property>
+       <item>
+        <widget class="QPushButton" name="load_vessel_mask_btn">
+         <property name="text">
+          <string>Load Vessel Mask</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="load_cell_positions_csv_btn">
+         <property name="text">
+          <string>Load Cell Positions Csv</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="load_mask_video_btn">
+         <property name="text">
+          <string>Load Mask vid</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QTextBrowser" name="debugDisplay">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>450</y>
+      <width>2101</width>
+      <height>121</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="vessel_mask_loaded_lbl">
+    <property name="geometry">
+     <rect>
+      <x>31</x>
+      <y>59</y>
+      <width>246</width>
+      <height>33</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Vessel Mask Loaded:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="filed_loaded_target_lbl">
+    <property name="geometry">
+     <rect>
+      <x>292</x>
+      <y>11</y>
+      <width>1821</width>
+      <height>33</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>-</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="vessel_mask_loaded_target_lbl">
+    <property name="geometry">
+     <rect>
+      <x>292</x>
+      <y>59</y>
+      <width>1471</width>
+      <height>33</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="cell_positions_csv_target_lbl">
+    <property name="geometry">
+     <rect>
+      <x>292</x>
+      <y>107</y>
+      <width>1751</width>
+      <height>33</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="mask_video_file_target_lbl">
+    <property name="geometry">
+     <rect>
+      <x>292</x>
+      <y>155</y>
+      <width>1791</width>
+      <height>33</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="mask_video_file_lbl">
+    <property name="geometry">
+     <rect>
+      <x>31</x>
+      <y>155</y>
+      <width>195</width>
+      <height>33</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Mask Video  file:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="file_loaded_lbl">
+    <property name="geometry">
+     <rect>
+      <x>31</x>
+      <y>11</y>
+      <width>137</width>
+      <height>33</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>File loaded:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="cell_positions_csv_lbl">
+    <property name="geometry">
+     <rect>
+      <x>31</x>
+      <y>107</y>
+      <width>214</width>
+      <height>33</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Cell Positions Csv:</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>2136</width>
+     <height>47</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionNew"/>
+    <addaction name="actionSave"/>
+    <addaction name="actionSave_As"/>
+   </widget>
+   <addaction name="menuFile"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionNew">
+   <property name="text">
+    <string>New Video</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="text">
+    <string>Save</string>
+   </property>
+   <property name="statusTip">
+    <string>Save current selected cell positions.</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionSave_As">
+   <property name="text">
+    <string>Save As</string>
+   </property>
+   <property name="statusTip">
+    <string>Save file to a new location</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>load_vessel_mask_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>loadVesselMaskSlot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>296</x>
+     <y>348</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>319</x>
+     <y>487</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>load_cell_positions_csv_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>loadVesselMaskSlot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>706</x>
+     <y>367</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>739</x>
+     <y>488</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>load_mask_video_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>LoadMaskVidSlot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1137</x>
+     <y>376</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1215</x>
+     <y>477</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>next_frame_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>goToNextFrameSlot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>940</x>
+     <y>224</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1066</x>
+     <y>94</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>prev_frame_btn</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>goToPrevFrameSlot()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>780</x>
+     <y>235</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>615</x>
+     <y>89</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>loadVesselMaskSlot()</slot>
+  <slot>loadCellPositionsSlot()</slot>
+  <slot>LoadMaskVidSlot()</slot>
+  <slot>goToNextFrameSlot()</slot>
+  <slot>goToPrevFrameSlot()</slot>
+ </slots>
+</ui>
