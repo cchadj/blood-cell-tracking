@@ -50,6 +50,12 @@ Standar Deviation Image | Output Vessel Mask
 :-------------------------:|:-------------------------:
 ![Subject10_Session109_OD__10_1x1_416_OA790nm1_extract_reg_cro](https://user-images.githubusercontent.com/22410337/222188269-30696636-f295-451f-86d4-aeafde2bfd13.png) | ![Vessel Mask](https://user-images.githubusercontent.com/22410337/222188522-e6e4dfcf-a3d5-40ce-805b-764ae3e900f6.png)
 
+# Channel Registration
+Videos from the two different channels have a vertical offset. We calculate the vertical offset by matching the vessel masks from the two channels of the registered videos.
+
+For more info please refer to the **3.5** section in the [thesis pdf](https://github.com/cchadj/blood-cell-tracking/files/10862213/Chrysostomos_Chadjiminas___blood_cell_tracking___thesis_report.pdf).
+
+![Channel Registration](https://user-images.githubusercontent.com/22410337/222189405-a9b44e04-cb3b-493a-9045-43496144e18f.png)
 
 ### Set up
 1. Download data from : https://liveuclac-my.sharepoint.com/personal/smgxadu_ucl_ac_uk/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fsmgxadu%5Fucl%5Fac%5Fuk%2FDocuments%2FShared%5FVideos&ct=1583323140391&or=OWA-NT&cid=9c7726fb-db68-e102-a4a7-f93127374108&originalPath=aHR0cHM6Ly9saXZldWNsYWMtbXkuc2hhcmVwb2ludC5jb20vOmY6L2cvcGVyc29uYWwvc21neGFkdV91Y2xfYWNfdWsvRWx0WXpFMFBVWHREc1RBY0NoQk5TY1lCSllSV2dkQmVOMmZuWHNZSmhCZ1BDQT9ydGltZT0wdG1lYXpQQTEwZw
