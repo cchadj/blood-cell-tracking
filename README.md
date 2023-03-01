@@ -31,7 +31,7 @@ Positive patches are centered around erythrocytes while negative patches are pat
 At inference time we extract a patch arround each pixel of the image and assign a probability of it being an erythrocite based on the output of the CNN.</br>
 This process produces a probability map from which the locations of the cells are estimated. 
 
-For more info please refer to the **3.2** section in the [thesis pdf](https://github.com/cchadj/blood-cell-tracking/files/10862213/Chrysostomos_Chadjiminas___blood_cell_tracking___thesis_report.pdf).
+For more info please refer to the **3.2** section of the [thesis pdf](https://github.com/cchadj/blood-cell-tracking/files/10862213/Chrysostomos_Chadjiminas___blood_cell_tracking___thesis_report.pdf).
 
 Here is an example of a registered input video of the retina on the right and the output probability map on the left.
 In the probability map the blue dots centered around the probability blobs signify the estimated erythrocyte location.
@@ -44,7 +44,7 @@ Input Registered Video     |  Probability Map with estimated cell locations as b
 To improve the accuracy of our estimation and also optimise the process of estimating the locations of the erythrocytes for each frame of the input we must reduce the search-space to the capillaries of the retina as thhere can't be erythrocytes outside of the capillaries.</br>
 To improve this we extract a vessel mask for each video by applying an image processing pipeline to the standard deviation image of the video.
 
-For more info please refer to the **3.4** section in the [thesis pdf](https://github.com/cchadj/blood-cell-tracking/files/10862213/Chrysostomos_Chadjiminas___blood_cell_tracking___thesis_report.pdf).
+For more info please refer to the **3.4** section of the [thesis pdf](https://github.com/cchadj/blood-cell-tracking/files/10862213/Chrysostomos_Chadjiminas___blood_cell_tracking___thesis_report.pdf).
 
 Standar Deviation Image | Output Vessel Mask
 :-------------------------:|:-------------------------:
@@ -53,9 +53,16 @@ Standar Deviation Image | Output Vessel Mask
 # Channel Registration
 Videos from the two different channels have a vertical offset. We calculate the vertical offset by matching the vessel masks from the two channels of the registered videos.
 
-For more info please refer to the **3.5** section in the [thesis pdf](https://github.com/cchadj/blood-cell-tracking/files/10862213/Chrysostomos_Chadjiminas___blood_cell_tracking___thesis_report.pdf).
+For more info please refer to the **3.5** section of the [thesis pdf](https://github.com/cchadj/blood-cell-tracking/files/10862213/Chrysostomos_Chadjiminas___blood_cell_tracking___thesis_report.pdf).
 
 ![Channel Registration](https://user-images.githubusercontent.com/22410337/222189405-a9b44e04-cb3b-493a-9045-43496144e18f.png)
+
+# Blood cell matching between channels
+As a final step the estimated cell locations between the two channels must be matched. To do this we select a straight capillary segment in which we want to estimate the velocity of the cells. An average cell is computed for each frame of the two channels. The average cells are then matched to calculate the displacement.
+
+For more info please refer to the **3.6** section of the [thesis pdf](https://github.com/cchadj/blood-cell-tracking/files/10862213/Chrysostomos_Chadjiminas___blood_cell_tracking___thesis_report.pdf).
+
+![Average Cell matching](https://user-images.githubusercontent.com/22410337/222193453-6f9efa99-6836-4f6c-a850-0f6f9d3aa943.png)
 
 ### Set up
 1. Download data from : https://liveuclac-my.sharepoint.com/personal/smgxadu_ucl_ac_uk/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fsmgxadu%5Fucl%5Fac%5Fuk%2FDocuments%2FShared%5FVideos&ct=1583323140391&or=OWA-NT&cid=9c7726fb-db68-e102-a4a7-f93127374108&originalPath=aHR0cHM6Ly9saXZldWNsYWMtbXkuc2hhcmVwb2ludC5jb20vOmY6L2cvcGVyc29uYWwvc21neGFkdV91Y2xfYWNfdWsvRWx0WXpFMFBVWHREc1RBY0NoQk5TY1lCSllSV2dkQmVOMmZuWHNZSmhCZ1BDQT9ydGltZT0wdG1lYXpQQTEwZw
