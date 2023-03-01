@@ -24,12 +24,27 @@ allowing for the software’s longevity.
 [Towards a Deep Learning Pipeline
 for Measuring Retinal Bloodflow PDF](https://github.com/cchadj/blood-cell-tracking/files/10862213/Chrysostomos_Chadjiminas___blood_cell_tracking___thesis_report.pdf)
 
+# Blood Cell Classification
 
-#
-Input Registered Video     |  Output Estimations ( Over Probability Map )
+For blood cell classification we train a CNN with positives and negatives patches extracted from the training videos.</br>
+Positive patches are centered around erythrocytes while negative patches are patches extracted arround but not centered on erythrocytes.</br>
+At inference time we extract a patch arround each pixel of the image and assign a probability of it being an erythrocite based on the output of the CNN.</br>
+This process produces a probability map from which the locations of the cells are estimated. 
+
+For more info please refere to the [thesis pdf](https://github.com/cchadj/blood-cell-tracking/files/10862213/Chrysostomos_Chadjiminas___blood_cell_tracking___thesis_report.pdf).
+
+Here is an example of a registered input video of the retina on the right and the output probability map on the left.
+In the probability map the blue dots centered around the probability blobs signify the estimated erythrocyte location.
+
+Input Registered Video     |  Probability Map with estimated cell locations as blue dots
 :-------------------------:|:-------------------------:
 ![Input Registered Video](https://user-images.githubusercontent.com/22410337/222170570-3df557d3-ab71-488d-b0f4-04620532edf8.gif)  |  ![Output Estimations ( Over Probability Map ) ](https://user-images.githubusercontent.com/22410337/222170449-b42c50a4-85bb-4987-98be-064da3a44039.gif)
 
+# Vesselness - Capillary detection
+
+Input Registered Video     | Output Vessel Mask
+:-------------------------:|:-------------------------:
+![Input Registered Video](https://user-images.githubusercontent.com/22410337/222170570-3df557d3-ab71-488d-b0f4-04620532edf8.gif)  |  ![Output Estimations ( Over Probability Map ) ](https://user-images.githubusercontent.com/22410337/222170449-b42c50a4-85bb-4987-98be-064da3a44039.gif)
 
 ### Set up
 1. Download data from : https://liveuclac-my.sharepoint.com/personal/smgxadu_ucl_ac_uk/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fsmgxadu%5Fucl%5Fac%5Fuk%2FDocuments%2FShared%5FVideos&ct=1583323140391&or=OWA-NT&cid=9c7726fb-db68-e102-a4a7-f93127374108&originalPath=aHR0cHM6Ly9saXZldWNsYWMtbXkuc2hhcmVwb2ludC5jb20vOmY6L2cvcGVyc29uYWwvc21neGFkdV91Y2xfYWNfdWsvRWx0WXpFMFBVWHREc1RBY0NoQk5TY1lCSllSV2dkQmVOMmZuWHNZSmhCZ1BDQT9ydGltZT0wdG1lYXpQQTEwZw
