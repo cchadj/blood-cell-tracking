@@ -1,4 +1,4 @@
-# cell-tracking-ucl-thesis
+# Towards a Deep Learning Pipeline for Measuring Retinal Bloodflow
 
 # Abstract
 
@@ -18,6 +18,12 @@ learning that can improve the performance of the tool as more samples are collec
 from subjects. In addition, the modular nature of the tool allows for replacing its
 components, such as the capillary segmentation, with state-of-the-art techniques
 allowing for the software’s longevity.
+
+# Thesis Pdf
+
+[Towards a Deep Learning Pipeline
+for Measuring Retinal Bloodflow PDF](https://github.com/cchadj/blood-cell-tracking/files/10862213/Chrysostomos_Chadjiminas___blood_cell_tracking___thesis_report.pdf)
+
 
 #
 Input Registered Video     |  Output Estimations ( Over Probability Map )
