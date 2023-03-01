@@ -24,6 +24,12 @@ allowing for the software’s longevity.
 [Towards a Deep Learning Pipeline
 for Measuring Retinal Bloodflow PDF](https://github.com/cchadj/blood-cell-tracking/files/10862213/Chrysostomos_Chadjiminas___blood_cell_tracking___thesis_report.pdf)
 
+# Thesis Presentation Video
+
+Please click the following picture to go to the youtube video of the thesis presentation.
+
+[![Thesis Presentation](http://img.youtube.com/vi/_2u2MemHv5o/0.jpg)](https://www.youtube.com/watch?v=_2u2MemHv5o)
+
 # Blood Cell Classification
 
 For blood cell classification we train a CNN with positives and negatives patches extracted from the training videos.</br>
